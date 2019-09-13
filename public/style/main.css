@@ -49,6 +49,10 @@ nav ul.nav-list .nav-item a{
     .list{
         display: none !important;
     }
+
+    .logo{
+        margin-left: 15px;
+    }
  }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -56,11 +60,17 @@ nav ul.nav-list .nav-item a{
     .list{
         display: none !important;
     }
+
+    .logo{
+        margin-left: 20px;
+    }
  }
  
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
-    
+    .logo{
+        margin-left: 100px;
+    }
  }
  
  /* Large devices (laptops/desktops, 992px and up) */

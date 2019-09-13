@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- start navbar -->
     <div>
         <nav id="navbar" class="navbar">
             <div class="nav">
@@ -25,7 +26,7 @@
                 </div>
                 <button class="btn-show" onclick="showNavList()">show</button>
                 <button class="btn-hide" onclick="hideNavList()">hide</button>
-                <div class="list-mobile">
+                <div class="list-mobile" id="list-mobile">
                     <ul class="nav-list-mobile">
                         <li class="nav-item-mobile"><a href="">Home</a></li>
                         <li class="nav-item-mobile"><a href="">About</a></li>
@@ -35,14 +36,20 @@
             </div>
         </nav>
     </div>
+    <!-- end navbar -->
+
+    <!-- start header -->
+    <div id="section1">
+
+    </div>
 
     <script>
         function showNavList(){
-            document.getElementsByClassName("list-mobile").style.display = 'block';
+            document.getElementById("list-mobile").style.display = 'block';
         }
 
         function hideNavList(){
-            document.getElementsByClassName("list-mobile").style.display = 'none';
+            document.getElementById("list-mobile").style.display = 'none';
         }
     </script>
 </body>

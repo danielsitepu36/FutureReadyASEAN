@@ -2,27 +2,37 @@
 <html lang="en">
 
 <head>
+    <!-- Set Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Set title -->
     <title>Future Ready ASEAN</title>
+
+    <!-- CSS Link -->
     <link rel="stylesheet" href="style/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- Preloader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="spinner-container">
             <div class="spinner"></div>
         </div>
-    </div>
+    </div> -->
     
     <!-- start navbar -->
     <div>
         <nav id="navbar" class="navbar">
             <div class="nav">
                 <div class="logo">
-                    <img src="images/logo-omahti.png" alt="" class="nav-logo">
+                    <a href="">
+                        <img src="images/logo-omahti.png" alt="" class="nav-logo">
+                    </a>
                 </div>
                 <div class="list">
                     <ul class="nav-list">
@@ -31,8 +41,6 @@
                         <li class="nav-item"><a href="">List3</a></li>
                     </ul>
                 </div>
-                <button class="btn-show" onclick="showNavList()">show</button>
-                <button class="btn-hide" onclick="hideNavList()">hide</button>
                 <div class="list-mobile" id="list-mobile">
                     <ul class="nav-list-mobile">
                         <li class="nav-item-mobile"><a href="">Home</a></li>
@@ -40,6 +48,8 @@
                         <li class="nav-item-mobile"><a href="">List3</a></li>
                     </ul>
                 </div>
+                <button class="btn-show" id="btn-show" onclick="showNavList()"><i class="fas fa-bars"></i></button>
+                <button class="btn-hide" id="btn-hide" onclick="hideNavList()"><i class="far fa-times-circle"></i></button>
             </div>
         </nav>
     </div>
@@ -53,19 +63,15 @@
     <script>
         function showNavList(){
             document.getElementById("list-mobile").style.display = 'block';
+            document.getElementById("btn-show").style.display = 'none';
+            document.getElementById("btn-hide").style.display = 'block';
         }
 
         function hideNavList(){
             document.getElementById("list-mobile").style.display = 'none';
+            document.getElementById("btn-show").style.display = 'block';
+            document.getElementById("btn-hide").style.display = 'none';
         }
-
-        document.addEventListener("load", function(event){
-            document.getElementById("preloader").style.display = "block";
-        });
-
-        document.addEventListener("DOMContentLoaded", function(event){
-            document.getElementById("preloader").style.display = "none";
-        });
     </script>
 </body>
 

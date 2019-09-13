@@ -51,22 +51,47 @@ nav ul.nav-list .nav-item a{
     background-color: transparent;
     padding-top: 15px;
     padding-bottom: 15px;
-    position: absolute;
     width: 100%;
+    position: fixed;
+    transition: ease-in-out .1s;
 }
 
 .btn-hide, .btn-show{
     border: none;
-    color: white;
     background-color: transparent;
     display: none;
     font-size: 24px;
     line-height: 1;
+    margin-left: 73%;
+    z-index: 99999;
+}
+
+.btn-show{
+    color: white;
 }
 
 #list-mobile{
     position: absolute;
-    display: none;
+    right: 0;
+    font-size: 26px;
+    padding-right: 100px;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    z-index: 0;
+    background-color: white;
+    opacity: 0;
+    top: 0;
+    transition: ease-in-out .5s;
+}
+
+#list-mobile a{
+    text-decoration: none;
+    color: black;
+}
+
+#list-mobile li{
+    list-style-type: none;
 }
 
 #section1{
@@ -91,6 +116,11 @@ nav ul.nav-list .nav-item a{
     .btn-show{
         display: block;
     }
+
+    #navbar{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
  }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -106,6 +136,11 @@ nav ul.nav-list .nav-item a{
     .btn-show{
         display: block;
     }
+
+    #navbar{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
  }
  
  /* Medium devices (landscape tablets, 768px and up) */
@@ -116,6 +151,11 @@ nav ul.nav-list .nav-item a{
 
     .btn-show{
         display: block;
+    }
+
+    #navbar{
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
  }
  
@@ -132,6 +172,11 @@ nav ul.nav-list .nav-item a{
 
     .btn-show{
         display: none;
+    }
+
+    #navbar{
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
  }
  

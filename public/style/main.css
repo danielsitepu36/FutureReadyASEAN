@@ -46,6 +46,7 @@ nav ul.nav-list .nav-item a{
 
 .list-mobile{
     position: absolute;
+    display: none;
 }
 
  /* Extra small devices (phones, 600px and down) */

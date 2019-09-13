@@ -44,6 +44,10 @@ nav ul.nav-list .nav-item a{
     padding-bottom: 15px;
 }   
 
+.list-mobile{
+    position: absolute;
+}
+
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
     .list{
@@ -51,11 +55,15 @@ nav ul.nav-list .nav-item a{
     }
 
     .logo{
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
     .logo img{
         width: 80px;
+    }
+
+    .list-mobile{
+        display: block;
     }
  }
 
@@ -65,15 +73,22 @@ nav ul.nav-list .nav-item a{
         display: none !important;
     }
 
+    .list-mobile{
+        display: block;
+    }
+
     .logo{
-        margin-left: 20px;
+        margin-left: 30px;
     }
  }
  
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
     .logo{
-        margin-left: 100px;
+        margin-left: 50px;
+    }
+    .list-mobile{
+        display: block;
     }
  }
  

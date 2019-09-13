@@ -51,7 +51,7 @@ nav ul.nav-list .nav-item a{
     }
 
     .logo{
-        margin-left: 15px;
+        margin-left: 40px;
     }
  }
 
@@ -62,14 +62,14 @@ nav ul.nav-list .nav-item a{
     }
 
     .logo{
-        margin-left: 20px;
+        margin-left: 40px;
     }
  }
  
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
     .logo{
-        margin-left: 100px;
+        margin-left: 40px;
     }
  }
  
@@ -78,6 +78,10 @@ nav ul.nav-list .nav-item a{
     .list{
         display: block !important;
         margin-left: 48%;
+    }
+
+    .logo{
+        margin-left: 100px;
     }
  }
  

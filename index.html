@@ -10,6 +10,13 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner-container">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    
     <!-- start navbar -->
     <div>
         <nav id="navbar" class="navbar">
@@ -51,6 +58,14 @@
         function hideNavList(){
             document.getElementById("list-mobile").style.display = 'none';
         }
+
+        document.addEventListener("load", function(event){
+            document.getElementById("preloader").style.display = "block";
+        });
+
+        document.addEventListener("DOMContentLoaded", function(event){
+            document.getElementById("preloader").style.display = "none";
+        });
     </script>
 </body>
 

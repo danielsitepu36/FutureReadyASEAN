@@ -55,7 +55,7 @@ nav ul.nav-list .nav-item a{
     }
 
     .logo img{
-        width: 50px;
+        width: 80px;
     }
  }
 
@@ -73,7 +73,7 @@ nav ul.nav-list .nav-item a{
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) {
     .logo{
-        margin-left: 10px;
+        margin-left: 100px;
     }
  }
  

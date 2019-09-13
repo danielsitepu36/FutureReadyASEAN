@@ -57,7 +57,12 @@
 
     <!-- start header -->
     <div id="section1">
-        <h1 id="header-title"></h1>
+        <div>
+            <h1 id="header-title">WELCOME TO (ISI APAAN)</h1>
+        </div>
+        <div class="button-more" id="more-container">
+            <a href="#" id="btn-more"><b>Getting started</b></a>
+        </div>
     </div>
 
     <div>
@@ -65,8 +70,12 @@
     </div>
 
     <script>
+        const sleep = ms => new Promise(res => setTimeout(res, ms));
         let open = false;
-        typeEffect();
+        let headerText = document.getElementById("header-title");
+        let buttonMore = document.getElementById("more-container");
+        runFade(headerText, buttonMore);
+
         function showNavList(){
             document.getElementById("list-mobile").style.opacity = '1';
             document.getElementById("list-mobile").style.right = '0';
@@ -83,21 +92,48 @@
             open = false;
         }
 
+        async function fadeIn(elem, callback){
+            elem.style.opacity = "0";
+            await sleep(300);
+            for(let i = 0; i<=1; i = i + 0.01){
+                elem.style.opacity = "" + i + "";
+                await sleep(8);
+            }
+            if(callback != null){
+                callback(elem);
+            }
+        }
+
+        async function fadeOut(elem){
+            elem.style.opacity = "1";
+            await sleep(700);
+            for(let i = 1; i>=0; i = i - 0.01){
+                elem.style.opacity = "" + i + "";
+                await sleep(8);
+            }
+        }
+
+        async function runFade(headerText, buttonMore){
+            await fadeIn(headerText, null);
+            await fadeOut(headerText);
+            await typeEffect();
+            await fadeIn(buttonMore, null);
+        }
+
         async function typeEffect(){
             let i = 0;
-            let text = ["Ini judul pertama", "Judul kedua ini", "Ketiga ini judul"];
-            setInterval(function(){
-
+            await sleep(500);
+            document.getElementById("header-title").style.opacity = "1";
+            let text = ["Ini slogan pertama", "Ini slogan kedua", "Ini slogan ketiga", "Nama website"];
+            while(i<4){
                 document.getElementById("header-title").innerHTML = text[i];
                 i++;
-                if(i == 3){
-                    i = 0;
-                }
-            }, 1000);
+                await sleep(1000);
+            }
         }
 
         document.addEventListener("scroll", function(){
-            if(window.pageYOffset > 300){
+            if(window.pageYOffset > document.getElementById("section1").offsetHeight - 200){
                 document.getElementById("navbar").style.backgroundColor = "red";
             }
             else{

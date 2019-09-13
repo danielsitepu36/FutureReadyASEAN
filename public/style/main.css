@@ -6,7 +6,7 @@
 
 nav ul.nav-list .nav-item a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .nav-logo{
@@ -39,7 +39,8 @@ nav ul.nav-list .nav-item a{
 }
 
 #navbar{
-    background-color:rgba(0, 0, 0, 0.8);
+    /* background-color:rgba(0, 0, 0, 0.8); */
+    background-color: transparent;
     padding-top: 15px;
     padding-bottom: 15px;
     position: absolute;
@@ -53,7 +54,7 @@ nav ul.nav-list .nav-item a{
 
 #section1{
     height: 100vh;
-    background-image: url(../images/header-bg.jpg);
+    background-image: url(../images/header-bgblk.jpg);
 }
 
  /* Extra small devices (phones, 600px and down) */

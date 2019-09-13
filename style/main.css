@@ -62,7 +62,7 @@ nav ul.nav-list .nav-item a{
 
 #section1{
     height: 100vh;
-    background-image: url(../images/header-bgblk.jpg);
+    background-image: url(/images/header-bgblk.jpg);
 }
 
  /* Extra small devices (phones, 600px and down) */

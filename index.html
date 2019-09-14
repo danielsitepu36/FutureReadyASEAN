@@ -35,11 +35,12 @@
                     </a>
                 </div>
                 <div class="list">
-                    <ul class="nav-list">
-                        <li class="nav-item"><a href="#">Home</a></li>
-                        <li class="nav-item"><a href="#">About</a></li>
-                        <li class="nav-item"><a href="#">List3</a></li>
-                    </ul>
+                    <div class="nav-list">
+                        <div class="nav-item"><a href="#">HOME</a></div>
+                        <div class="nav-item"><a href="#">ABOUT</a></div>
+                        <div class="nav-item"><a href="#">BLOG</a></div>
+                        <div class="nav-item"><a href="#">CONTACT</a></div>
+                    </div>
                 </div>
                 <div class="list-mobile" id="list-mobile">
                     <ul class="nav-list-mobile">
@@ -59,7 +60,9 @@
     <div id="section1">
         <div>
             <h1 id="header-title">WELCOME TO (ISI APAAN)</h1>
+            <span style="opacity: 0; color: white;" id="header-subtitle">slogan 1, slogan 2, slogan 3</span>
         </div>
+        
         <div class="button-more" id="more-container">
             <a href="#" id="btn-more"><b>Getting started</b></a>
         </div>
@@ -73,6 +76,7 @@
         const sleep = ms => new Promise(res => setTimeout(res, ms));
         let open = false;
         let headerText = document.getElementById("header-title");
+        let headerSubtitleText = document.getElementById("header-subtitle");
         let buttonMore = document.getElementById("more-container");
         runFade(headerText, buttonMore);
 
@@ -104,9 +108,9 @@
             }
         }
 
-        async function fadeOut(elem){
+        async function fadeOut(elem, sleepTime){
             elem.style.opacity = "1";
-            await sleep(700);
+            await sleep(sleepTime);
             for(let i = 1; i>=0; i = i - 0.01){
                 elem.style.opacity = "" + i + "";
                 await sleep(8);
@@ -115,8 +119,12 @@
 
         async function runFade(headerText, buttonMore){
             await fadeIn(headerText, null);
-            await fadeOut(headerText);
+            await fadeOut(headerText, 700);
             await typeEffect();
+            await fadeOut(headerText, 0);
+            headerText.innerHTML = "Nama website";
+            await fadeIn(headerText, null);
+            await fadeIn(headerSubtitleText, null);
             await fadeIn(buttonMore, null);
         }
 
@@ -124,8 +132,8 @@
             let i = 0;
             await sleep(500);
             document.getElementById("header-title").style.opacity = "1";
-            let text = ["Ini slogan pertama", "Ini slogan kedua", "Ini slogan ketiga", "Nama website"];
-            while(i<4){
+            let text = ["Ini slogan pertama", "Ini slogan kedua", "Ini slogan ketiga"];
+            while(i<3){
                 document.getElementById("header-title").innerHTML = text[i];
                 i++;
                 await sleep(1000);
@@ -133,7 +141,7 @@
         }
 
         document.addEventListener("scroll", function(){
-            if(window.pageYOffset > document.getElementById("section1").offsetHeight - 200){
+            if(window.pageYOffset > document.getElementById("section1").offsetHeight - 500){
                 document.getElementById("navbar").style.backgroundColor = "red";
             }
             else{

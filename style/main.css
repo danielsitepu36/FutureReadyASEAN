@@ -12,9 +12,23 @@
     background-color: rebeccapurple;
 }
 
-nav ul.nav-list .nav-item a{
+nav .nav-list .nav-item a{
     text-decoration: none;
     color: white;
+    cursor: pointer;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: ease-in-out .3s;
+}
+
+nav .nav-list .nav-item a:hover{
+    background: rgba(0, 0, 0, .4);
+}
+.nav-list{
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .nav-logo{
@@ -23,13 +37,7 @@ nav ul.nav-list .nav-item a{
 
 .nav-item{
     list-style-type: none;
-    display: inline-block;
-    margin-left: 15px;
-    margin-right: 15px; 
-}
-
-.nav div{
-    display: inline-block;
+    display: inline;
 }
 
 .nav{
@@ -49,11 +57,10 @@ nav ul.nav-list .nav-item a{
 #navbar{
     /* background-color:rgba(0, 0, 0, 0.8); */
     background-color: transparent;
-    padding-top: 15px;
-    padding-bottom: 15px;
     width: 100%;
     position: fixed;
     transition: ease-in-out .3s;
+    z-index: 999999;
 }
 
 .btn-hide, .btn-show{
@@ -145,11 +152,6 @@ nav ul.nav-list .nav-item a{
     .btn-show{
         display: block;
     }
-
-    #navbar{
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
  }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -165,11 +167,6 @@ nav ul.nav-list .nav-item a{
     .btn-show{
         display: block;
     }
-
-    #navbar{
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
  }
  
  /* Medium devices (landscape tablets, 768px and up) */
@@ -180,11 +177,6 @@ nav ul.nav-list .nav-item a{
 
     .btn-show{
         display: block;
-    }
-
-    #navbar{
-        padding-top: 25px;
-        padding-bottom: 25px;
     }
  }
  
@@ -202,16 +194,11 @@ nav ul.nav-list .nav-item a{
     .btn-show{
         display: none;
     }
-
-    #navbar{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
  }
  
  /* Extra large devices (large laptops and desktops, 1200px and up) */
  @media only screen and (min-width: 1200px) {
     .list{
-        margin-left: 65%;
+        margin-left: 48%;
     }
  } 

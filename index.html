@@ -128,13 +128,13 @@
         document.addEventListener("scroll", function(){
             if(window.pageYOffset > document.getElementById("section1").offsetHeight - 500){
                 let navbar = document.getElementById("navbar");
-                navbar.style.backgroundColor = "red";
+                navbar.style.backgroundColor = "#388e3c";
                 let navlist = document.getElementsByTagName("li");
                 for(let i = 0; i< navlist.length; i++){
                     let child = navlist[i].childNodes;
                     navlist[i].onmouseenter = function(){
                         this.style.backgroundColor = "white";
-                        child[0].style.color = "red";
+                        child[0].style.color = "#388e3c";
                     }
                     navlist[i].onmouseleave = function(){
                         this.style.backgroundColor = "transparent";
@@ -143,11 +143,14 @@
                 }
             }
             else{
-                document.getElementById("navbar").style.backgroundColor = "transparent";
+                let navbar = 
+                document.getElementById("navbar");
+                navbar.style.backgroundColor = "transparent";
                 let navlist = document.getElementsByTagName("li");
                 for(let i = 0; i< navlist.length; i++){
                     let child = navlist[i].childNodes;
                     navlist[i].style.backgroundColor = "transparent";
+                    child[0].style.color = "white";
                     navlist[i].onmouseenter = function(){
                         this.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
                         child[0].style.color = "white";

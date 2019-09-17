@@ -16,9 +16,19 @@
 White : #e4f9f5
 Turtoise : #30e3ca
 Tosca : #11999e
-Dark : #40514e
+Dark : #40514e*/
+
+/*Color2:
+Dark Green :#388e3c
+Green : #8bc34a
+Bright green :#dce775
+Bright yellow : #fff59d
 
 /* Navbar */
+
+body{
+    background-color: #e4f9f5;
+}
 
 #navbar{
     background-color: transparent;

@@ -12,38 +12,85 @@
     background-color: rebeccapurple;
 }
 
-nav .nav-list .nav-item a{
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 30px;
-    padding-right: 30px;
+/* Navbar */
+
+#navbar{
+    background-color: transparent;
+    clear:both;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 9999999;
     transition: ease-in-out .3s;
 }
 
-nav .nav-list .nav-item a:hover{
-    background: rgba(0, 0, 0, .4);
+.nav{
+    float: right;
+    padding: 0;
+    margin-left: auto;
 }
-.nav-list{
-    padding-top: 25px;
-    padding-bottom: 25px;
+
+.nav ul{
+    height: 100%;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    display: inline-block;
 }
 
 .nav-logo{
-    width: 100px;
+    float: left;
 }
 
-.nav-item{
+.nav ul .nav-item{
     list-style-type: none;
-    display: inline;
+    display: inline-block;
+    width: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    transition: ease-in-out .3s;
 }
 
-.nav{
-    display: flex;
-    align-items: center;
+.nav ul .nav-item:hover{
+    background-color: rgba(0, 0, 0, 0.3);
 }
+
+.nav-item-active{
+    list-style-type: none;
+    display: inline-block;
+    width: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    transition: ease-in-out .3s;
+}
+
+.nav-item-active:hover{
+    background-color: white;
+    color: red;
+}
+
+.nav ul .nav-item a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: ease-in-out .3s;
+}
+
+/* End navbar */
 
 .logo{
     margin-left: 100px;
@@ -52,15 +99,6 @@ nav .nav-list .nav-item a:hover{
 .list{
     margin-right: 100px;
     margin-left: 65%;
-}
-
-#navbar{
-    /* background-color:rgba(0, 0, 0, 0.8); */
-    background-color: transparent;
-    width: 100%;
-    position: fixed;
-    transition: ease-in-out .3s;
-    z-index: 999999;
 }
 
 .btn-hide, .btn-show{

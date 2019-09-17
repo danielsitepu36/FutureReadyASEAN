@@ -26,45 +26,30 @@
     </div> -->
     
     <!-- start navbar -->
-    <div>
-        <nav id="navbar" class="navbar">
-            <div class="nav">
-                <div class="logo">
-                    <a href="#">
-                        <img src="images/logo-omahti.png" alt="" class="nav-logo">
-                    </a>
-                </div>
-                <div class="list">
-                    <div class="nav-list">
-                        <div class="nav-item"><a href="#">HOME</a></div>
-                        <div class="nav-item"><a href="#">ABOUT</a></div>
-                        <div class="nav-item"><a href="#">BLOG</a></div>
-                        <div class="nav-item"><a href="#">CONTACT</a></div>
-                    </div>
-                </div>
-                <div class="list-mobile" id="list-mobile">
-                    <ul class="nav-list-mobile">
-                        <li class="nav-item-mobile"><a href="#">Home</a></li>
-                        <li class="nav-item-mobile"><a href="#">About</a></li>
-                        <li class="nav-item-mobile"><a href="#">List3</a></li>
-                    </ul>
-                </div>
-                <button class="btn-show" id="btn-show" onclick="showNavList()"><i class="fas fa-bars"></i></button>
-                <button class="btn-hide" id="btn-hide" onclick="hideNavList()"><i class="far fa-times-circle"></i></button>
-            </div>
+    <div id="navbar">
+        <div class="nav-logo">
+            <img src="./images/logo-omahti.png" alt="" width="100px;">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="nav-item"><a href="#">HOME</a></li>
+                <li class="nav-item"><a href="#">ABOUT</a></li>
+                <li class="nav-item"><a href="#">BLOG</a></li>
+                <li class="nav-item"><a href="#">CONTACT</a></li>
+            </ul>
         </nav>
     </div>
     <!-- end navbar -->
 
     <!-- start header -->
     <div id="section1">
-        <div>
-            <h1 id="header-title">WELCOME TO (ISI APAAN)</h1>
-            <span style="opacity: 0; color: white;" id="header-subtitle">slogan 1, slogan 2, slogan 3</span>
+        <div style="text-align: center">
+            <h1 id="header-title">WELCOME TO FREA</h1>
+            <span style="opacity: 0; color: white;" id="header-subtitle">Exploring the nature for a better future</span>
         </div>
         
         <div class="button-more" id="more-container">
-            <a href="#" id="btn-more"><b>Getting started</b></a>
+            <a href="#" id="btn-more"><b>Getting Started</b></a>
         </div>
     </div>
 
@@ -122,7 +107,7 @@
             await fadeOut(headerText, 700);
             await typeEffect();
             await fadeOut(headerText, 0);
-            headerText.innerHTML = "Nama website";
+            headerText.innerHTML = "FREA";
             await fadeIn(headerText, null);
             await fadeIn(headerSubtitleText, null);
             await fadeIn(buttonMore, null);
@@ -132,7 +117,7 @@
             let i = 0;
             await sleep(500);
             document.getElementById("header-title").style.opacity = "1";
-            let text = ["Ini slogan pertama", "Ini slogan kedua", "Ini slogan ketiga"];
+            let text = ["Explore", "Nature", "Future"];
             while(i<3){
                 document.getElementById("header-title").innerHTML = text[i];
                 i++;
@@ -142,10 +127,36 @@
 
         document.addEventListener("scroll", function(){
             if(window.pageYOffset > document.getElementById("section1").offsetHeight - 500){
-                document.getElementById("navbar").style.backgroundColor = "red";
+                let navbar = document.getElementById("navbar");
+                navbar.style.backgroundColor = "red";
+                let navlist = document.getElementsByTagName("li");
+                for(let i = 0; i< navlist.length; i++){
+                    let child = navlist[i].childNodes;
+                    navlist[i].onmouseenter = function(){
+                        this.style.backgroundColor = "white";
+                        child[0].style.color = "red";
+                    }
+                    navlist[i].onmouseleave = function(){
+                        this.style.backgroundColor = "transparent";
+                        child[0].style.color = "white";
+                    }
+                }
             }
             else{
                 document.getElementById("navbar").style.backgroundColor = "transparent";
+                let navlist = document.getElementsByTagName("li");
+                for(let i = 0; i< navlist.length; i++){
+                    let child = navlist[i].childNodes;
+                    navlist[i].style.backgroundColor = "transparent";
+                    navlist[i].onmouseenter = function(){
+                        this.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+                        child[0].style.color = "white";
+                    }
+                    navlist[i].onmouseleave = function(){
+                        this.style.backgroundColor = "transparent";
+                        child[0].style.color = "white";
+                    }
+                }
             }
         });
 

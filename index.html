@@ -128,13 +128,13 @@
         document.addEventListener("scroll", function(){
             if(window.pageYOffset > document.getElementById("section1").offsetHeight - 500){
                 let navbar = document.getElementById("navbar");
-                navbar.style.backgroundColor = "#388e3c";
+                navbar.style.backgroundColor = "#11999e";
                 let navlist = document.getElementsByTagName("li");
                 for(let i = 0; i< navlist.length; i++){
                     let child = navlist[i].childNodes;
                     navlist[i].onmouseenter = function(){
                         this.style.backgroundColor = "white";
-                        child[0].style.color = "#388e3c";
+                        child[0].style.color = "#11999e";
                     }
                     navlist[i].onmouseleave = function(){
                         this.style.backgroundColor = "transparent";

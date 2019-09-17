@@ -27,7 +27,7 @@ Bright yellow : #fff59d
 /* Navbar */
 
 body{
-    background-color: #e4f9f5;
+    background-color: #fffdee;
 }
 
 #navbar{
@@ -79,7 +79,7 @@ body{
 }
 
 .nav ul .nav-item:hover{
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nav-item-active{
@@ -96,7 +96,7 @@ body{
 
 .nav-item-active:hover{
     background-color: white;
-    color: #11999e;
+    color: #388e3c;
 }
 
 .nav ul .nav-item a{

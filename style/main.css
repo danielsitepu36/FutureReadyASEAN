@@ -131,11 +131,42 @@ body{
     color: rgb(255, 255, 255);
 }
 
-#bdy{
-    margin-top: 3%;
+/* About */
+
+#about{
+    margin-top: 100px;
+    margin-bottom: 100px;
     margin-right: 7%;
     margin-left: 7%;
+    text-align: center;
 }
+
+#about h1{
+    margin-bottom: 50px;
+}
+
+#about div{
+    display: inline-block;
+}
+
+.about-card div{
+    display: inline-block !important;
+}
+
+.about-card{
+    width: 40%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left !important;
+}
+
+.about-card .about-desc div{
+    display: block !important;
+}
+
+/* End about */
 
 #list-mobile{
     position: absolute;
